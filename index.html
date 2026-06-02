@@ -11,6 +11,7 @@ header .wrap h1{font-size:30px;font-weight:800;letter-spacing:-.5px}
 header .wrap p{opacity:.95;margin-top:8px;font-size:15px}
 .tag{display:inline-block;background:rgba(255,255,255,.22);padding:4px 13px;border-radius:20px;font-size:13px;margin-top:14px}
 h2{font-size:21px;font-weight:700;margin:42px 0 16px;padding-left:12px;border-left:4px solid #03c75a;color:#16202c}
+.lead{font-size:14px;color:#5a6675;margin:-6px 0 14px}
 .verdict{background:#eafaf0;border:1px solid #b8ebcb;border-radius:14px;padding:24px 26px}
 .verdict h3{color:#0a9b4a;font-size:18px;margin-bottom:10px}
 .verdict p{font-size:15px;color:#374251}
@@ -29,6 +30,9 @@ th{background:#f0f3f8;color:#5a6675;font-weight:600;font-size:13px}
 td.num{text-align:right;font-variant-numeric:tabular-nums}
 tr.hl{background:#eafaf0} tr.sub td:first-child{color:#6b7685;padding-left:24px}
 tr.live{background:#fff1f0} tr.live td:first-child{color:#e0483d;font-weight:700}
+.bdg{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12.5px;font-weight:700}
+.bdg.hot{background:#ffe2dd;color:#d63a2c} .bdg.warm{background:#fff0d6;color:#c07c00}
+.bdg.flat{background:#eef1f5;color:#7a8493} .bdg.cold{background:#e3eefe;color:#2f6df0}
 .note{background:#fff;border:1px solid #e4e8ef;border-radius:12px;padding:18px 22px;font-size:14px;color:#4a5562;box-shadow:0 2px 8px rgba(20,30,50,.04)}
 .note b{color:#1f2733}
 .formula{background:#f7f9fc;border:1px dashed #c8d2e0;border-radius:10px;padding:14px 18px;font-size:13.5px;color:#4a5562;margin:10px 0 0}
@@ -65,6 +69,27 @@ footer{text-align:center;color:#9aa3b0;font-size:13px;margin-top:50px}
 <div class="chart-box"><h4>광고비(실집행) vs 광고매출 — 광고비는 평평한데 광고매출이 라이브일에 튐</h4><canvas id="c2" height="115"></canvas></div>
 <div class="chart-box"><h4>전체 ROAS (총매출 ÷ 실광고비) — 🔴 라이브일</h4><canvas id="c3" height="115"></canvas></div>
 
+<h2>① 광고매출 — 어떤 광고가 튀었나</h2>
+<p class="lead">타겟팅형 광고(ADVoost·성과형DA·쇼핑검색)가 라이브 효과를 받음. 반면 브랜드검색은 거의 안 움직임.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>광고 채널</th><th class="num">라이브일</th><th class="num">비라이브일</th><th class="num">배수</th></tr></thead>
+<tbody><tr><td>네이버 ADVoost쇼핑</td><td class="num">1,551,733</td><td class="num">913,050</td><td class="num"><span class="bdg warm">1.7x</span></td></tr><tr><td>네이버 브랜드검색(일반형)</td><td class="num">919,733</td><td class="num">819,357</td><td class="num"><span class="bdg flat">1.1x</span></td></tr><tr><td>네이버 쇼핑검색광고</td><td class="num">752,500</td><td class="num">546,147</td><td class="num"><span class="bdg warm">1.4x</span></td></tr><tr><td>네이버 사이트검색광고</td><td class="num">591,200</td><td class="num">470,603</td><td class="num"><span class="bdg flat">1.3x</span></td></tr><tr><td>네이버 성과형디스플레이광고</td><td class="num">572,267</td><td class="num">378,507</td><td class="num"><span class="bdg warm">1.5x</span></td></tr></tbody></table></div>
+<div class="note" style="margin-top:12px">
+<b>해석:</b> ADVoost쇼핑(+70%)·성과형디스플레이(+51%)·쇼핑검색(+38%)처럼 <b>네이버 타겟팅 알고리즘이 쓰이는 광고</b>가 크게 올랐습니다. 라이브로 모인 관심/시청 신호가 타겟팅 정확도를 높여 같은 예산으로 더 잘 전환된 것. 반대로 <b>브랜드검색(+12%)</b>은 이미 브랜드를 아는 사람이 검색하는 거라 변화가 작습니다.
+</div>
+
+<h2>② 그외(오가닉)매출 — 어디서 왔나</h2>
+<p class="lead">"라이브 보고 직접 검색"보다 <b>플러스스토어 노출 확대</b>가 더 큰 동력.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>오가닉 채널</th><th class="num">라이브일</th><th class="num">비라이브일</th><th class="num">배수</th></tr></thead>
+<tbody><tr><td>네이버플러스스토어-홈</td><td class="num">1,027,470</td><td class="num">325,985</td><td class="num"><span class="bdg hot">3.2x</span></td></tr><tr><td>네이버플러스스토어-검색</td><td class="num">396,567</td><td class="num">287,551</td><td class="num"><span class="bdg warm">1.4x</span></td></tr><tr><td>네이버검색</td><td class="num">251,500</td><td class="num">173,343</td><td class="num"><span class="bdg warm">1.5x</span></td></tr><tr><td>네이버가격비교-통합검색</td><td class="num">221,733</td><td class="num">312,800</td><td class="num"><span class="bdg cold">0.7x</span></td></tr><tr><td>네이버플러스스토어-통합검색</td><td class="num">211,000</td><td class="num">113,430</td><td class="num"><span class="bdg warm">1.9x</span></td></tr><tr><td>네이버-서비스</td><td class="num">156,707</td><td class="num">40,029</td><td class="num"><span class="bdg hot">3.9x</span></td></tr><tr><td>네이버가격비교-검색</td><td class="num">107,900</td><td class="num">121,300</td><td class="num"><span class="bdg cold">0.9x</span></td></tr><tr><td>네이버쇼핑-광고</td><td class="num">78,633</td><td class="num">44,083</td><td class="num"><span class="bdg warm">1.8x</span></td></tr><tr><td>네이버가격비교-카탈로그(검색)</td><td class="num">71,633</td><td class="num">76,107</td><td class="num"><span class="bdg cold">0.9x</span></td></tr><tr><td>웹사이트</td><td class="num">63,667</td><td class="num">126,053</td><td class="num"><span class="bdg cold">0.5x</span></td></tr><tr><td>네이버 모바일메인</td><td class="num">21,967</td><td class="num">10,360</td><td class="num"><span class="bdg hot">2.1x</span></td></tr><tr><td>기타채널</td><td class="num">21,967</td><td class="num">1,137</td><td class="num"><span class="bdg hot">19.3x</span></td></tr></tbody></table></div>
+<div class="note" style="margin-top:12px"><ul>
+<li><b>플러스스토어-홈 +215%(3.2배)가 압도적.</b> 라이브를 하면 네이버 플러스스토어 홈·추천 지면에 스토어가 더 노출돼, 거길 통해 들어와 구매. "여러 곳에 노출된다"는 가설이 이 채널에서 직접 확인됨.</li>
+<li><b>"라이브 보고 직접 검색" 도 실재.</b> 네이버검색 +45%, 플러스스토어-검색 +38% — 단, 플러스스토어 홈만큼은 아닌 보조 요인.</li>
+<li><b>미귀속 아님.</b> 전부 채널이 명확히 잡힌 오가닉 유입(플러스스토어·검색)이라 "기여 집계 안 됨"이 아니라 정상 귀속된 매출.</li>
+<li><b>반례 — 가격비교는 안 오름(0.7~0.9배).</b> 최저가 비교 쇼핑객은 라이브 노출에 영향을 안 받음. 즉 라이브 효과는 무차별이 아니라 <b>네이버가 밀어주는 노출 지면(플러스스토어 홈)에 집중</b>됨.</li>
+</ul></div>
+
 <h2>라이브일 vs 비라이브일 평균</h2>
 <div class="tbl-scroll"><table>
 <thead><tr><th>지표</th><th class="num">라이브일(3)</th><th class="num">비라이브일(30)</th><th class="num">차이</th></tr></thead>
@@ -73,7 +98,7 @@ footer{text-align:center;color:#9aa3b0;font-size:13px;margin-top:50px}
 <b>계산식</b><br>
 · 라이브매출 = 채널그룹 '사용자정의' + '네이버-쇼핑라이브'<br>
 · 광고매출 = 채널그룹 '광고'(성과형DA·ADVoost) + '검색광고'(쇼핑·사이트·브랜드검색)<br>
-· 그외(오가닉) = 총매출 − 라이브 − 광고 (검색·플러스스토어·일반유입·소셜 등)<br>
+· 그외(오가닉) = 총매출 − 라이브 − 광고 (플러스스토어·검색·가격비교 등)<br>
 · <code>전체 ROAS = 총매출 ÷ 실광고비</code> &nbsp;|&nbsp; <code>광고 ROAS = 광고매출 ÷ 실광고비</code><br>
 · 매출=마지막클릭 기준 / 광고비=네이버 실집행비(GFA+ADVOOST+검색광고)
 </div>
