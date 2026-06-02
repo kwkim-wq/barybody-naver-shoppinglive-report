@@ -13,8 +13,19 @@ header .wrap p{opacity:.95;margin-top:8px;font-size:15px}
 h2{font-size:21px;font-weight:700;margin:42px 0 16px;padding-left:12px;border-left:4px solid #03c75a;color:#16202c}
 .lead{font-size:14px;color:#5a6675;margin:-6px 0 14px}
 .verdict{background:#eafaf0;border:1px solid #b8ebcb;border-radius:14px;padding:24px 26px}
-.verdict h3{color:#0a9b4a;font-size:18px;margin-bottom:10px}
-.verdict p{font-size:15px;color:#374251}
+.verdict h3{color:#0a9b4a;font-size:18px;margin-bottom:12px}
+.verdict .vlead{font-size:15.5px;color:#27313d;font-weight:600;margin-bottom:16px}
+.verdict .vlead b{color:#0a9b4a}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.vitem{background:#fff;border:1px solid #cdeedb;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.vk{font-size:13px;color:#6b7685;font-weight:600}
+.vv{font-size:24px;font-weight:800;color:#27313d}
+.vv small{font-size:14px;font-weight:700;color:#8b95a3}
+.vv.green{color:#0a9b4a} .vv.blue{color:#2f6df0}
+.vs{font-size:12px;color:#929cab}
+.vnote{font-size:14px;color:#374251;background:#dff5e8;border-radius:10px;padding:11px 15px;margin:0}
+.vnote b{color:#0a7d3c}
+@media(max-width:640px){.vgrid{grid-template-columns:1fr}}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .card{background:#fff;border:1px solid #e4e8ef;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(20,30,50,.04)}
 .card .lab{font-size:13px;color:#6b7685}
@@ -51,8 +62,13 @@ footer{text-align:center;color:#9aa3b0;font-size:13px;margin-top:50px}
 
 <div class="verdict">
 <h3>✅ 결론 — 가설 강하게 지지됨</h3>
-<p>광고비를 거의 안 늘렸는데(<b>+2.9%</b>) 라이브일엔 광고매출 <b>+40%</b>·오가닉매출 <b>+58%</b>가 동시에 올랐습니다. 즉 라이브 직접매출을 빼고 봐도 광고·오가닉 매출이 같이 상승 → "라이브일엔 노출이 확대돼 네이버 광고 효율이 오르고 스마트스토어 매출이 동반 상승한다"는 가설이 확인됩니다.</p>
-<p style="margin-top:12px"><b>라이브가 끌어올린 추가매출(라이브 직접매출 제외)은 하루 약 +223만원.</b> 이 중 <b>광고 효율 상승이 1등(+126만, 57%)</b>, <b>플러스스토어 노출 확대가 근소한 2등(+91만, 43%)</b>입니다 — 광고가 조금 더 크지만 오가닉도 결코 뒤지지 않습니다. 그리고 오가닉 추가분은 <b>사실상 거의 전부가 플러스스토어</b>(+91만 중 플러스스토어 외는 +6만뿐)예요.</p>
+<p class="vlead">광고비는 그대로(<b>+2.9%</b>)인데 라이브일 스마트스토어 매출 <b>+160%</b>. 라이브 직접매출을 빼도 광고·오가닉이 같이 올랐다.</p>
+<div class="vgrid">
+<div class="vitem"><span class="vk">라이브가 만든 추가매출</span><span class="vv">+223만<small>/일</small></span><span class="vs">라이브 직접매출 제외</span></div>
+<div class="vitem"><span class="vk">1등 · 광고 효율 ↑</span><span class="vv green">+126만<small> (57%)</small></span><span class="vs">광고비 동결인데 ROAS +35%</span></div>
+<div class="vitem"><span class="vk">2등 · 플러스스토어 노출 ↑</span><span class="vv blue">+91만<small> (41%)</small></span><span class="vs">오가닉 추가분의 대부분</span></div>
+</div>
+<p class="vnote">→ 광고가 조금 더 크지만 <b>오가닉도 거의 비등</b>. 그리고 오가닉 추가분은 <b>사실상 전부 플러스스토어</b>(그 외는 +6만뿐).</p>
 </div>
 
 <h2>매출 3분할 (안 겹치게: 총 = 라이브 + 광고 + 그외)</h2>
